@@ -9,6 +9,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: var(--text-color);
+    overscroll-behavior: none;
 }
 
 header {
@@ -74,6 +75,15 @@ footer > ul > li > a {
     text-decoration: none;
 }
 
+summary {
+    font-size: 150%;
+    text-align: center;
+}
+
+p {
+    text-indent: 50px;
+}
+
 .avatar {
     height: 300px;
     width: 300px;
@@ -89,14 +99,14 @@ footer > ul > li > a {
     /* border: 2px solid white; */
     padding: 20px;
 }
-.presentation {
+.content {
     background-color: var(--bg-blue);
     width: 100%;
     margin: 20px;
     padding: 20px;
 }
 
-.presentation > p > a {
+details > p > a {
     color: white;
 }
 .project {
