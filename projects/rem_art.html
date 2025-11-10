@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel='stylesheet' href='../site.css'>
+        <link rel='icon' type='icon/svg' sizes='48x48' href='../media/favicon.ico'>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li> 
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="content">
+                    <h1>Relative Elevation Models</h1>
+                        <p>
+                            These projects were inspired by <a href="https://dancoecarto.com/">Daniel Coe</a>, Graphics Editor for the Washington State Geological Survey.
+                            When I was a college freshman, unsure of what path I wanted to take, his work contributed to my budding interest in the geosciences.
+                        </p>
+                        <p>
+                            Relative Elevation Models (REMs) are products derived from Digital Elevation Models (DEMs), which are raster grids where each cell contains a value representing its elevation above a constant baseline, typically sea level.
+                            Relative Elevation Models transform these grids such that each cell's value represents its elevation above the river surface.
+                            The resulting raster emphasizes geomorphic features of the river system, including past meanders and oxbow lakes.
+                            With relatively little experimentation with the raster's symbology, you can create beautiful art.
+                        </p>
+                        <p>
+                            Links to Daniel Coe's REM Tutorials:
+                            <ul>
+                                <li><a href="https://dancoecarto.com/creating-rems-in-qgis-the-idw-method">Creating REMs in QGIS with the IDW Method</a></li>
+                                <li><a href="https://dancoecarto.com/creating-rems-in-qgis-the-cross-section-method">Creating REMs in QGIS with the Cross-Section Method</a></li>
+                            </ul>
+                        </p>
+                    <div class="map-container">
+                        <a href="/media/RR_REM(1).png"><img src="/media/RR_REM(1).png" class="map" /></a>
+                        <div>
+                            <h2>
+                                The Root River (REM Method)
+                            </h2>
+                            <p>
+                                It's this website's background and, in my opinion, for good reason.
+                                I love the flowing nature of the image and it's a good reminder of my time living in the watershed as a Conservation Corps member at the Fillmore Soil and Water Conservation District.
+                            </p>
+                            <p>
+                                Software used: QGIS<br>
+                                Data source: DEM data acquired via <a href="https://mntopo.dnr.state.mn.us/">MnTOPO</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <h1>Digital Elevation Models</h1>
+                        <p>
+                            Before trying to create Relative Elevation Models, I tried similar work with DEMs.
+                            As you can see in the picture below, you can still get pretty images, but with the baseline elevation at a constant value, the resulting colors are affected by a point's distance upstream.
+                        </p>
+                    <div class="map-container">
+                        <a href="/media/RootRiverHillshade_Original.JPG"><img src="/media/RootRiverHillshade_Original.JPG" class="map" /></a>
+                        <div>
+                            <h2>
+                                The Root River (DEM Method)
+                            </h2>
+                            <p>
+                                One observation of note is that using the DEM rather than the REM highlights the Lanesboro Dam, as the significant change in elevation results in a sudden shift from a more muted purple upstream to deeper hues downstream.
+                            </p>
+                            <p>
+                                Software used: ArcGIS Pro<br>
+                                Data source: DEM data acquired via <a href="https://mntopo.dnr.state.mn.us/">MnTOPO</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

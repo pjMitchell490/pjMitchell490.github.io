@@ -149,6 +149,12 @@ summary {
     overscroll-behavior: contain;
 }
 
+#terracemap {
+    height: 480px;
+    width: 640px;
+    margin: auto;
+}
+
 figure > img {
     background: white;
     display: block;

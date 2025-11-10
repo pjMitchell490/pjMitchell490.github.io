@@ -3,6 +3,10 @@
     <head>
         <link rel='stylesheet' href='../site.css'>
         <link rel='icon' type='icon/svg' sizes='48x48' href='../media/favicon.ico'>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
     </head>
     <body style="background-image: url(/media/Zumbro_DEM.png)">
         <header>
@@ -24,6 +28,10 @@
                         The Zumbro River, or Wazi Oju, is a tributary of the Upper Mississippi River located in southeastern Minnesota.
                         In summer 2020, I joined the <a href="https://mnimorph.science/">MNiMORPH Research Group</a> at the University of Minnesota and began mapping the river's terraces.
                     </p>
+                    <h2>The River Long Profile</h2>
+                    <p>
+                        A channel's long profile is a representation of its changing elevation as you move from its upstream to its downstream end.
+                    </p>
                     <h2>What are River Terraces?</h2>
                     <p>
                         When rivers flood and overtop their banks, they deposit sediment in the surrounding area called the floodplain.
@@ -37,7 +45,17 @@
                     <figure>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_series_of_paired_river_terraces_plainsvg.svg" />
                         <figcaption>Three levels of terraces overlooking the modern floodplain.<br><a href="https://commons.wikimedia.org/wiki/File:A_series_of_paired_river_terraces_plainsvg.svg">Sushant savla</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption>
-                    </figure>
+                    </figure> 
+                    <h2>The Zumbro River Watershed</h2>
+                    <div id="terracemap"></div>
+                    <p><i>Note: For performance reasons, the features shown are simplified representations of those used for my research.
+                        Original polygons were hand-digitized using a 5m DEM. Terrace, floodplain, and valley centerline shapefiles can be found on <a href="https://github.com/pjMitchell490/Zumbro_Shapefiles">my Github</a>.
+                    </i></p>
+                    <p>
+                        In lieu of a traditional legend (which will be added at a later date), filled polygons represent terraces, semi-transparent polygons represent the modern floodplain, and the solid lines represent the centerline of the river valley.
+                    <span style="color: #d95f02">Orange</span> is the main channel of the Zumbro, <span style="color: #7570b3">purple</span> is the North Fork, and <span style="color: #1b9e77">green</span> is the South Fork.
+                    </p>
+                    <script type="module" src="zumbro_terraces.js"></script>
                 </div>
             </div>
         </main>
